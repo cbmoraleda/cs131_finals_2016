@@ -1,4 +1,4 @@
-package clare.le;
+package clare_tan;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
