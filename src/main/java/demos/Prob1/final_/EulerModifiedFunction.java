@@ -7,7 +7,7 @@
  * Created by Clare on 12/8/2016.
  */
 
-package final_;
+package demos.Prob1.final_;
 
 import java.lang.*;
 import org.mariuszgromada.math.mxparser.*;

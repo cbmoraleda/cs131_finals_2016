@@ -9,7 +9,7 @@
  * and open the template in the editor.
  */
 
-package final_implicit;
+package demos.Prob1.final_implicit;
 
 import org.mariuszgromada.math.mxparser.Argument;
 

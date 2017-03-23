@@ -7,12 +7,12 @@
  * Copyright (c) 2007 Free Software Foundation, Inc. All rights reserved.
  */
 
-package final_implicit;
+package demos.Prob1.final_implicit;
 
 import java.io.File;
 import javax.swing.*;
 import org.math.plot.*;
-import final_implicit.NewtonRoot;
+import demos.Prob1.final_implicit.NewtonRoot;
 
 /*
    -This code uses jmathplot and jmathio libraries.
