@@ -9,10 +9,10 @@
 
 package demos.Prob1.final_implicit;
 
+import louie_buera.*;
 import java.io.File;
 import javax.swing.*;
 import org.math.plot.*;
-import demos.Prob1.final_implicit.NewtonRoot;
 
 /*
    -This code uses jmathplot and jmathio libraries.
@@ -43,7 +43,7 @@ public class EulerImplicit {
             String fun = "x + x^(3/2) * " + funComponent2 + " + " + funComponent1;
             String funDer = "1 + x^(1/2) * (3/2) * " + funComponent2;
 
-            n[i+1] = NewtonRoot.doNewtonRoot(fun, funDer, n[i], 0.001, newtonN);
+            n[i+1] = NewtonRoot.NewtonRoot(fun, funDer, n[i], 0.001, newtonN);
         }
 
         for (i = 1; i < eulerN+1; i++) {
