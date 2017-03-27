@@ -1,7 +1,7 @@
 package demos.Prob1.final_implicit;
 
+import louie_buera.*;
 import org.junit.Test;
-
 import static org.junit.Assert.*;
 
 /**
@@ -31,7 +31,7 @@ public class EulerImplicitTest {
             String fun = "x + x^(3/2) * " + fun_component2 + " + " + fun_component1;
             String funDer = "1 + x^(1/2) * (3/2) * " + fun_component2;
 
-            n[i+1] = NewtonRoot.doNewtonRoot(fun, funDer, n[i], 0.001, newtonN);
+            n[i+1] = NewtonRoot.NewtonRoot(fun, funDer, n[i], 0.001, newtonN);
         }
 
         double[] expected = new double[251];

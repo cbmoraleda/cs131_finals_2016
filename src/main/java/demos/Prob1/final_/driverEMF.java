@@ -8,6 +8,7 @@
  */
 
 package demos.Prob1.final_;
+import clare_tan.*;
 
 import org.mariuszgromada.math.mxparser.*;
 import org.math.plot.*;
