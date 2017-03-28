@@ -2,6 +2,7 @@ package demos.Prob2;
 
 import static org.junit.Assert.*;
 
+import lyon_lao.RK4Class;
 import org.junit.Test;
 
 public class RK4ClassTest {

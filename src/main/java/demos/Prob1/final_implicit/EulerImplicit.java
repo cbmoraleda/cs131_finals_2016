@@ -9,7 +9,7 @@
 
 package demos.Prob1.final_implicit;
 
-import louie_buera.*;
+import louie_buera.NewtonRoot;
 import java.io.File;
 import javax.swing.*;
 import org.math.plot.*;

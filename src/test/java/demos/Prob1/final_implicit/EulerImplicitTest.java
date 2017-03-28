@@ -1,6 +1,6 @@
 package demos.Prob1.final_implicit;
 
-import louie_buera.*;
+import louie_buera.NewtonRoot;
 import org.junit.Test;
 import static org.junit.Assert.*;
 

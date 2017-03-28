@@ -5,6 +5,8 @@
 
 package lyon_lao;
 
+import org.mariuszgromada.math.mxparser.Argument;
+
 public class RK4Class
 {
   //Classical RK4
