@@ -4,7 +4,6 @@
  */
 
 package lyon_lao;
-import org.mariuszgromada.math.mxparser.*;
 
 public class RK4Class
 {

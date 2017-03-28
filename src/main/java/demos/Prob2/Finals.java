@@ -3,7 +3,7 @@
 */
 
 package demos.Prob2;
-import static lyon_lao.RK4Class.RK4;
+import lyon_lao.*;
 
 /**
  * CS 131 Finals
@@ -48,11 +48,12 @@ public class Finals {
 		exportToCSV();
 	}
 	
-    public static void getRK4(){
-    	 rk4Answers = RK4("y", "-(0.16/0.5)*y - (9.81/1.2)*sin(x)", a, b, h, x1, y1);
+    public static Double[][] getRK4(){
+    	 rk4Answers = RK4Class.RK4("y", "-(0.16/0.5)*y - (9.81/1.2)*sin(x)", a, b, h, x1, y1);
     	 tValues = rk4Answers[0];
          xValues = rk4Answers[1];
          yValues = rk4Answers[2];
+         return rk4Answers;
     }
     
     public static void showGraph(){
