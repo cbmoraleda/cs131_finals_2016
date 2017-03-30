@@ -16,3 +16,6 @@ hs_err_pid*
 /target/
 .idea/
 *.iml
+Prob5.csv
+Sys2ODEsRK4.csv
+text.csv
