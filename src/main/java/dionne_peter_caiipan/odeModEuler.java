@@ -21,9 +21,11 @@ public class odeModEuler {
 
         for(int i = 0; i < N-1; i++) {
             xArray[i+1] = xArray[i] + h;
-            SlopeEu = O.func(xArray[i], yArray[i]);
+            //SlopeEu = O.func(xArray[i], yArray[i]);
+            SlopeEu = xArray[i] * yArray[i];
             yEu = yArray[i] + SlopeEu * h;
-            SlopeEnd = O.func(xArray[i+1], yEu);
+            //SlopeEnd = O.func(xArray[i+1], yEu);
+            SlopeEnd = xArray[i+1] * yEu;
             yArray[i+1] = yArray[i] + (SlopeEu+SlopeEnd) * h/2;
         }
     }
