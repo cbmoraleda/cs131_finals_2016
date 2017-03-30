@@ -1,0 +1,25 @@
+How to use the tester:
+1. Input test cases as follows:
+- NUMBER_OF_CASES
+- CASE_TYPE
+- TEST_VALUES
+- CASE_TYPE
+- CASE_VALUES
+etc..
+
+For Test type 1 (Manual input):
+- CASE_TYPE
+- TEST_VALUES
+- MATRIX_Y
+- MATRIX_X
+- MATRIX_T
+
+For Test type 2 (Gold Standard, after problem computation):
+- CASE_TYPE
+- TEST_VALUES
+
+NOTE: FOR TEST TYPES 1&2, MATRIX SIZE SHOULD BE 4X4
+
+For Test type 3 (Gold Standard, algorithm only):
+- CASE_TYPE
+- TEST_VALUES
