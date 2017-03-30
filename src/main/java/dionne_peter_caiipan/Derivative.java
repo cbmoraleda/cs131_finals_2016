@@ -4,10 +4,12 @@ Please make sure x and y are arrays containing the x and y coordinates
 of the data points, respectively.
 */
 
-class derivative {
+package dionne_peter_caiipan;
+
+class Derivative {
     float dx[];
 
-    derivative(float[] x, float[] y) {
+    Derivative(float[] x, float[] y) {
         int n = x.length;
         dx = new float[n];
         // Forward FDF

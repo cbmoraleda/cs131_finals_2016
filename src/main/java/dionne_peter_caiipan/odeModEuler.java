@@ -4,6 +4,8 @@ Please make sure that the ODE function in the class ODE is named ODE
 and accepts exactly two float inputs.
 */
 
+package dionne_peter_caiipan;
+
 class odeModEuler {
     float xArray[];
     float yArray[];

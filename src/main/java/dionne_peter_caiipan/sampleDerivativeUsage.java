@@ -1,6 +1,9 @@
 /*
 This is a sample usage of the derivative function.
 */
+
+package dionne_peter_caiipan;
+
 import java.util.Scanner;
 import java.io.*;
 
@@ -16,7 +19,7 @@ public class sampleDerivativeUsage {
         y = new float[] {2,4,6,8,10};
 
 
-        derivative D = new derivative(x,y);
+        Derivative D = new Derivative(x,y);
         printOutputGraphPlots(x, D.dx);
         makeCSV(x, D.dx);
     }
