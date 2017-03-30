@@ -2,7 +2,9 @@
 This is a sample usage of the modified euler function
 */
 
-package dionne_peter_caiipan;
+package demos.Misc;
+
+import dionne_peter_caiipan.odeModEuler;
 
 import java.util.Scanner;
 import java.io.*;

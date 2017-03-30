@@ -6,10 +6,10 @@ of the data points, respectively.
 
 package dionne_peter_caiipan;
 
-class Derivative {
-    float dx[];
+public class Derivative {
+    public float dx[];
 
-    Derivative(float[] x, float[] y) {
+    public Derivative(float[] x, float[] y) {
         int n = x.length;
         dx = new float[n];
         // Forward FDF

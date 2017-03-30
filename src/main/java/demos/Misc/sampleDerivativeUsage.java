@@ -2,10 +2,11 @@
 This is a sample usage of the derivative function.
 */
 
-package dionne_peter_caiipan;
+package demos.Misc;
 
 import java.util.Scanner;
 import java.io.*;
+import dionne_peter_caiipan.Derivative;
 
 public class sampleDerivativeUsage {
     public static void main (String args[]) {

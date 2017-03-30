@@ -8,7 +8,7 @@ package dionne_peter_caiipan;
 
 public class ODE {
 
-    float func(float x, float y) {
+    public float func(float x, float y) {
         // place function here
         return x * y;
     }
