@@ -1,26 +1,35 @@
-/*
-This class is almost direct translation of the octave script odeModEuler.
-Please make sure x and y are arrays containing the x and y coordinates
-of the data points, respectively.
-*/
-
 package dionne_peter_caiipan;
 
-public class Derivative {
-    public float dx[];
+import static org.junit.Assert.*;
+import org.junit.Test;
+import java.util.*;
+import org.mariuszgromada.math.mxparser.*;
 
-    public Derivative(float[] x, float[] y) {
-        int n = x.length;
-        dx = new float[n];
-        // Forward FDF
-        dx[0] = (y[1] - y[0]) / (x[1] - x[0]);
+public class DerivativeTest {
+    Derivative derivativeClass = new Derivative();
 
-        // Central FDF
-        for (int i = 1; i < n-1; i++) {
-            dx[i] = (y[i+1] - y[i-1]) / (x[i+1] - x[i-1]);
+    @Test
+    public void testDerivativeExample() {
+        double[] x = {1,2,3,4,5};
+        Function derFunc = new Function("f(x)=2*x + 1");
+        Function func = new Function("f(x) = x^2 + x");
+
+        double[] expectedY = new double[5];
+
+        for(int i = 0; i < 5; i++) {
+            expectedY[i] = derFunc.calculate(x[i]);
         }
 
-        // Backward FDF
-        dx[n-1] = (y[n-1] - y[n-2]) / (x[n-1] - x[n-2]);
+        double[] y = new double[5];
+
+        for(int i = 0; i < 5; i++) {
+            y[i] = func.calculate(x[i]);
+        }
+
+        double[] actualY = derivativeClass.Derivative(x,y);
+
+        assertArrayEquals("Test derivative must past simple example",
+                            expectedY, actualY, 0.001);
     }
+
 }
