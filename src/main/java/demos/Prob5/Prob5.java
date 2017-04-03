@@ -7,9 +7,6 @@ import gerard_arel_latoga.*;
 
 import org.mariuszgromada.math.mxparser.*;
 
-import faneallrich_yao.Sys2ODEsRK2;
-import gerard_arel_latoga.Sec;
-
 import java.io.PrintWriter;
 import java.io.IOException;
 import jerick_callado.*;
