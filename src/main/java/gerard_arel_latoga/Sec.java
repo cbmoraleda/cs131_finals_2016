@@ -1,3 +1,6 @@
+/*
+* Copyright (c) 2016 UPD CS 131 Arel Latoga. All rights reserved.
+*/
 package gerard_arel_latoga;
 
 import org.mariuszgromada.math.mxparser.*;
@@ -36,7 +39,7 @@ public class Sec {
             double Xb = b.getArgumentValue();
             double Xi;
 
-            System.out.println((int)a.getArgumentValue());
+            //System.out.println((int)a.getArgumentValue());
 
             if (Xa <= 0 && 0 < Xb) {
                 Xa = 0;
@@ -49,7 +52,7 @@ public class Sec {
                 for (i = 0; i < (int) imax.getArgumentValue(); i++) {
                     double FunXb = y.calculate(Xb);
                     Xi = Xb - FunXb*(Xa-Xb)/(y.calculate(Xa) - FunXb);
-                    System.out.println(y.calculate(Xa));
+                    //System.out.println(y.calculate(Xa));
                     if (Math.abs((Xi - Xb) / Xb) < err.getArgumentValue()) {
                         answer = Xi;
                         break;
@@ -63,7 +66,7 @@ public class Sec {
             }
     }
 
-    double Answer() {
+    public double Answer() {
         return answer;
     }
 }
