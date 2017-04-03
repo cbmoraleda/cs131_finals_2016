@@ -2,10 +2,13 @@
  * Copyright (c) 2017 CS 131 IPSE NKIA. All rights reserved.
  */
 
+package demos.Prob6;
+
 import java.io.File;
 import java.util.Scanner;
 import static org.junit.Assert.*;
 import org.junit.Test;
+import faith_therese_pena.LUdecompCrout_Standard;
 
 /*
  * Please read the readme file in the resources folder on how to use this unit tester.
@@ -18,7 +21,8 @@ public class FileTest {
 	@Test
 	public void fileTester(){
 		try{
-		File in = new File(FileTest.class.getResource("test.in").getFile());
+		String dir = new File( "." ).getCanonicalPath();
+		File in = new File(dir + "/src/test/resources/test.in");
 		scan = new Scanner(in);
 		String line = scan.nextLine();
 		int cases = Integer.parseInt(line.replaceAll("\\s", ""));
