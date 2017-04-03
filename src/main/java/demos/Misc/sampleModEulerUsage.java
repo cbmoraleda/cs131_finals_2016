@@ -12,17 +12,17 @@ import java.io.*;
 public class sampleModEulerUsage {
     public static void main (String args[]) {
         Scanner in = new Scanner(System.in);
-        float a, b, h, yINI;
+        double a, b, h, yINI;
         String enter;
 
         System.out.print("Enter a : ");
-        a = Float.parseFloat(in.nextLine());
+        a = Double.parseDouble(in.nextLine());
         System.out.print("Enter b : ");
-        b = Float.parseFloat(in.nextLine());
+        b = Double.parseDouble(in.nextLine());
         System.out.print("Enter h : ");
-        h = Float.parseFloat(in.nextLine());
+        h = Double.parseDouble(in.nextLine());
         System.out.print("Enter yINI : ");
-        yINI = Float.parseFloat(in.nextLine());
+        yINI = Double.parseDouble(in.nextLine());
 
         System.out.print("Please make sure that the ODE function in the class \nODE is named ODE. Press enter to continue.");
         enter = in.nextLine();
@@ -32,7 +32,7 @@ public class sampleModEulerUsage {
         makeCSV(M.xArray, M.yArray);
     }
 
-    public static void printOutputGraphPlots(float[] x, float[] y) {
+    public static void printOutputGraphPlots(double[] x, double[] y) {
         System.out.println("X\tdX");
         int n = x.length;
 
@@ -41,7 +41,7 @@ public class sampleModEulerUsage {
         }
     }
 
-    public static void makeCSV(float[] x, float[] y) {
+    public static void makeCSV(double[] x, double[] y) {
         int n = x.length;
         try{
             PrintWriter writer = new PrintWriter("ModEulerOutput.csv", "UTF-8");

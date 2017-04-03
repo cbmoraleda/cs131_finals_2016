@@ -8,6 +8,8 @@
 
 package demos.Prob6;
 
+import faith_therese_pena.*;
+
 public class Main {
 
 	// OVERRIDE VALUES
@@ -77,7 +79,7 @@ public class Main {
 	protected void initializeValues(double length, double temp_zero, double temp_point_one, double ambient_temp, double convective_heat_coeff, double perimeter, double thermal_conductivity, double surface_area, double intervals){
 		computeInitialValues(length, intervals, convective_heat_coeff, perimeter, thermal_conductivity, surface_area, ambient_temp);
 		initializeMatrix(temp_zero, temp_point_one, initial_diagonal_a);
-		matrixLUOutput = LU.LUdecompCrout.LU(myMatrixA);
+		matrixLUOutput = LUdecompCrout.LU(myMatrixA);
 		}
 
 	public void computePinFinTemp(){
@@ -87,13 +89,13 @@ public class Main {
 		myMatrixY[0] = myMatrixB[0] / myLowerTriangle[0][0];
 
 		for (int i = 1; i < 4; i++) {
-			myMatrixY[i] = (myMatrixB[i] - LU.Mult.Mult(myLowerTriangle[i], myMatrixY)) / myLowerTriangle[i][i];
+			myMatrixY[i] = (myMatrixB[i] - Mult.Mult(myLowerTriangle[i], myMatrixY)) / myLowerTriangle[i][i];
 		}
 
 		myMatrixX[3] = myMatrixY[3] / myUpperTriangle[3][3];
 
 		for (int i = 2; i >= 0; i--) {
-			myMatrixX[i] = (myMatrixY[i] - LU.Mult.Mult(myMatrixX, myUpperTriangle[i])) / myUpperTriangle[i][i];
+			myMatrixX[i] = (myMatrixY[i] - Mult.Mult(myMatrixX, myUpperTriangle[i])) / myUpperTriangle[i][i];
 		}
 
 		for (int i = 1; i < 5; i++) {

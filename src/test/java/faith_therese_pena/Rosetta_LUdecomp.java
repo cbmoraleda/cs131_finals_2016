@@ -2,6 +2,8 @@
  * Code obtained from https://rosettacode.org/wiki/LU_decomposition
  */
 
+package faith_therese_pena;
+
 import static java.util.Arrays.stream;
 import java.util.Locale;
 import static java.util.stream.IntStream.range;

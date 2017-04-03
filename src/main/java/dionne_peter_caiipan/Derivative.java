@@ -7,11 +7,11 @@ of the data points, respectively.
 package dionne_peter_caiipan;
 
 public class Derivative {
-    public float dx[];
+    public double dx[];
 
-    public Derivative(float[] x, float[] y) {
+    public Derivative(double[] x, double[] y) {
         int n = x.length;
-        dx = new float[n];
+        dx = new double[n];
         // Forward FDF
         dx[0] = (y[1] - y[0]) / (x[1] - x[0]);
 

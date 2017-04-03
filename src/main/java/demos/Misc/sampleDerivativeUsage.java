@@ -11,21 +11,20 @@ import dionne_peter_caiipan.Derivative;
 public class sampleDerivativeUsage {
     public static void main (String args[]) {
         Scanner in = new Scanner(System.in);
-        float x[], y[];
+        double x[], y[];
         String enter;
 
         // place the x array here
-        x = new float[] {1,2,3,4,5};
+        x = new double[] {1,2,3,4,5};
         // place the y array here
-        y = new float[] {2,4,6,8,10};
-
+        y = new double[] {2,4,6,8,10};
 
         Derivative D = new Derivative(x,y);
         printOutputGraphPlots(x, D.dx);
         makeCSV(x, D.dx);
     }
 
-    public static void printOutputGraphPlots(float[] x, float[] y) {
+    public static void printOutputGraphPlots(double[] x, double[] y) {
         System.out.println("X\tY");
         int n = x.length;
 
@@ -34,7 +33,7 @@ public class sampleDerivativeUsage {
         }
     }
 
-    public static void makeCSV(float[] x, float[] y) {
+    public static void makeCSV(double[] x, double[] y) {
         int n = x.length;
         try{
             PrintWriter writer = new PrintWriter("DerivativeOutput.csv", "UTF-8");

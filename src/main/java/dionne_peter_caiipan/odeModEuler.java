@@ -1,20 +1,20 @@
 /*
 This class is almost direct translation of the octave script odeModEuler.
 Please make sure that the ODE function in the class ODE is named ODE
-and accepts exactly two float inputs.
+and accepts exactly two double inputs.
 */
 
 package dionne_peter_caiipan;
 
 public class odeModEuler {
-    public float xArray[];
-    public float yArray[];
-    public float SlopeEu, yEu, SlopeEnd;
-    public odeModEuler(float a, float b, float h, float yINI) {
+    public double xArray[];
+    public double yArray[];
+    public double SlopeEu, yEu, SlopeEnd;
+    public odeModEuler(double a, double b, double h, double yINI) {
         ODE O = new ODE();
-        int N = Math.round((b-a) / h);
-        xArray = new float[N];
-        yArray = new float[N];
+        int N = (int)Math.round((b-a) / h);
+        xArray = new double[N];
+        yArray = new double[N];
 
         xArray[0] = a;
         yArray[0] = yINI;

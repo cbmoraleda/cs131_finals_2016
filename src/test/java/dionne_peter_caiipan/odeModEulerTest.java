@@ -6,11 +6,11 @@ and accepts exactly two float inputs.
 
 package dionne_peter_caiipan;
 
-public class odeModEuler {
+public class odeModEulerTest {
     public float xArray[];
     public float yArray[];
     public float SlopeEu, yEu, SlopeEnd;
-    public odeModEuler(float a, float b, float h, float yINI) {
+    public void odeModEuler(float a, float b, float h, float yINI) {
         ODE O = new ODE();
         int N = Math.round((b-a) / h);
         xArray = new float[N];

@@ -6,11 +6,9 @@ import java.util.*;
 import org.mariuszgromada.math.mxparser.*;
 
 public class DerivativeTest {
-    Derivative derivativeClass = new Derivative();
-
     @Test
     public void testDerivativeExample() {
-        double[] x = {1,2,3,4,5};
+        double[] x = {1,1.1,1.2,1.3,1.4};
         Function derFunc = new Function("f(x)=2*x + 1");
         Function func = new Function("f(x) = x^2 + x");
 
@@ -26,10 +24,11 @@ public class DerivativeTest {
             y[i] = func.calculate(x[i]);
         }
 
-        double[] actualY = derivativeClass.Derivative(x,y);
+        Derivative derivatives = new Derivative(x,y);
+        double[] actualY = derivatives.dx;
 
         assertArrayEquals("Test derivative must past simple example",
-                            expectedY, actualY, 0.001);
+                            expectedY, actualY, 0.1);
     }
 
 }

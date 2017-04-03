@@ -1,6 +1,9 @@
 /*
  * code obtained from http://www.sci.utah.edu/~wallstedt/LU.htm
  */
+
+package faith_therese_pena;
+
 public class LUdecompCrout_Standard {
 	public static double [][][] formatCrout(double[][] D){
 		double [][] L = new double[D.length][D[0].length];
