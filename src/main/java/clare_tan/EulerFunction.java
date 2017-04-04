@@ -1,11 +1,15 @@
-package clare_tan;
+/*
+ * Copyright (c) Department of Computer Science CS 131
+ * Numerical Methods class. All rights reserved.
+ */
 
 /**
  * Created by Clare on 12/7/2016.
  */
 
+package clare_tan;
+
 import org.mariuszgromada.math.mxparser.*;
-import java.lang.*;
 
 public class EulerFunction {
     double [] xValues;

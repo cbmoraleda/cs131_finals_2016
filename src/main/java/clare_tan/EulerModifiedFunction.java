@@ -1,11 +1,16 @@
-package clare_tan;
+/*
+ * Copyright (c) Department of Computer Science CS 131
+ * Numerical Methods class. All rights reserved.
+ */
 
 /**
  * Created by Clare on 12/8/2016.
  */
 
+package clare_tan;
+
 import org.mariuszgromada.math.mxparser.*;
-import java.lang.*;
+
 public class EulerModifiedFunction {
 
     double [] xValues;
@@ -32,11 +37,13 @@ public class EulerModifiedFunction {
         int n = ((int) Math.ceil((b-a)/h)) + 1;
         double [] xPoints = new double[n];
         double [] yPoints = new double[n];
-        xPoints[0] = a;
-        yPoints[0] = yIni;
         double slopeEu;
         double yEu;
         double slopeEnd;
+        
+        xPoints[0] = a;
+        yPoints[0] = yIni;
+        
         for (int i =0; i<(n-1); i++){
             xPoints[i+1] = xPoints[i] + h;
             slopeEu = ode.calculate(xPoints[i], yPoints[i]);

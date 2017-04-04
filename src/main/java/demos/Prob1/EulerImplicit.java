@@ -7,10 +7,9 @@
  * Copyright (c) 2007 Free Software Foundation, Inc. All rights reserved.
  */
 
-package demos.Prob1.final_implicit;
+package demos.Prob1;
 
 import louie_buera.NewtonRoot;
-import java.io.File;
 import javax.swing.*;
 import org.math.plot.*;
 
@@ -18,7 +17,7 @@ import org.math.plot.*;
    -This code uses jmathplot and jmathio libraries.
    -The jar files are included in the folder
    -"jar xf <.jarfile>" to extract
-   */
+*/
 
 public class EulerImplicit {
     public static void main(String[] args) {

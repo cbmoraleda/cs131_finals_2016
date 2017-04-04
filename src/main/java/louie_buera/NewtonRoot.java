@@ -1,8 +1,14 @@
 /*
+ * Copyright (c) Department of Computer Science CS 131
+ * Numerical Methods class. All rights reserved.
+ */
+
+/*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package louie_buera;
 
 import org.mariuszgromada.math.mxparser.Argument;
@@ -11,6 +17,7 @@ import org.mariuszgromada.math.mxparser.Argument;
  *
  * @author hp
  */
+
 public class NewtonRoot {
     public static double NewtonRoot(Function Fun, Function FunDer, double Xest, double Err, int imax) throws ArithmeticException{
         /*

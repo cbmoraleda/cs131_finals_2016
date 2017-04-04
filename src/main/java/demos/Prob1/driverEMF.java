@@ -7,12 +7,11 @@
  * Created by Bautista, Besas, and Callado in 2016.
  */
 
-package demos.Prob1.final_;
-import clare_tan.*;
+package demos.Prob1;
 
+import clare_tan.*;
 import org.mariuszgromada.math.mxparser.*;
 import org.math.plot.*;
-import java.io.*;
 import java.util.Scanner;
 import javax.swing.*;
 
