@@ -1,4 +1,4 @@
-package demos.Prob1.final_implicit;
+package demos.Prob1;
 
 import louie_buera.NewtonRoot;
 import org.junit.Test;
