@@ -5,28 +5,36 @@ and accepts exactly two float inputs.
 */
 
 package dionne_peter_caiipan;
+import static org.junit.Assert.*;
+import org.junit.Test;
 
 public class odeModEulerTest {
-    public float xArray[];
-    public float yArray[];
-    public float SlopeEu, yEu, SlopeEnd;
-    public void odeModEuler(float a, float b, float h, float yINI) {
-        ODE O = new ODE();
-        int N = Math.round((b-a) / h);
-        xArray = new float[N];
-        yArray = new float[N];
+    odeModEuler odeModEulerFunc = new odeModEuler();
 
-        xArray[0] = a;
-        yArray[0] = yINI;
+    @Test
+    public void testOdeModEulerExample() {
+        double a = 0;
+        double b = 1;
+        double h = 0.1;
+        double yINI = 1;
+        int N = (int)Math.round((b-a) / h);
 
-        for(int i = 0; i < N-1; i++) {
-            xArray[i+1] = xArray[i] + h;
-            //SlopeEu = O.func(xArray[i], yArray[i]);
-            SlopeEu = xArray[i] * yArray[i];
-            yEu = yArray[i] + SlopeEu * h;
-            //SlopeEnd = O.func(xArray[i+1], yEu);
-            SlopeEnd = xArray[i+1] * yEu;
-            yArray[i+1] = yArray[i] + (SlopeEu+SlopeEnd) * h/2;
-        }
+        double[] expected = new double[N];
+        expected[0] = 1.00000;
+        expected[1] = 1.00500;
+        expected[2] = 1.02018;
+        expected[3] = 1.04599;
+        expected[4] = 1.08322;
+        expected[5] = 1.13305;
+        expected[6] = 1.19707;
+        expected[7] = 1.27739;
+        expected[8] = 1.37677;
+        expected[9] = 1.49876;
+
+        odeModEulerFunc.odeModEuler(a, b, h, yINI);
+
+        double[] actual = odeModEulerFunc.yArray;
+
+        assertArrayEquals("Ode modified must pass simple example", expected, actual, 0.00001);
     }
 }
