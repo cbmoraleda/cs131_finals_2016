@@ -1,5 +1,4 @@
 from math import sin, pi
-#import matplotlib.pyplot as plt
 
 def rk4(f, x0, y0, x1, n):
     vx = [0] * (n + 1)
@@ -40,16 +39,13 @@ def f2(x, y): #dy/dt = w
 
 vx, vy, vy2 = rk4(f, 0, pi/2, 18, 72)
 
-fo = open("problem4Test.txt", "a+")
+fo = open("problem2Test.txt", "a+")
 for item in vy:
-    fo.write("%s " % float(item))
+    fo.write("%s " % float(item)) #Expected X
 fo.write("\n")
 for item in vy2:
-    fo.write("%s " % float(item))
+    fo.write("%s " % float(item)) #Expected Y
 fo.close()
 
 for i in range(0, len(vx)):
 	print vx[i], '\t\t', vy[i], '\t\t', vy2[i]
-
-#plt.plot(vx,vy)
-#plt.show()
