@@ -39,7 +39,7 @@ def f2(x, y): #dy/dt = w
 
 vx, vy, vy2 = rk4(f, 0, pi/2, 18, 72)
 
-fo = open("problem2Test.txt", "a+")
+fo = open("problem2Python.txt", "a+")
 for item in vy:
     fo.write("%s " % float(item)) #Expected X
 fo.write("\n")
