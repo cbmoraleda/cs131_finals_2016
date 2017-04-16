@@ -6,35 +6,48 @@ and accepts exactly two float inputs.
 
 package dionne_peter_caiipan;
 import static org.junit.Assert.*;
+import java.util.*;
+import java.io.*;
 import org.junit.Test;
 
 public class odeModEulerTest {
     odeModEuler odeModEulerFunc = new odeModEuler();
 
+    public double[] convert_to_double_array(String[] stringArray) {
+      double[] result = new double[stringArray.length];
+
+      for(int i = 0; i < stringArray.length; i++) {
+        result[i] = Double.parseDouble(stringArray[i]);
+      }
+
+      return result;
+    }
+
     @Test
     public void testOdeModEulerExample() {
-        double a = 0;
-        double b = 1;
-        double h = 0.1;
-        double yINI = 1;
-        int N = (int)Math.round((b-a) / h);
+        try {
+          String dir = new File( ".").getCanonicalPath();
+      		File file = new File(dir + "/src/test/resources/test_files/dionne_peter_caiipan/odeModEuler.in");
+          Scanner scanner = new Scanner(file);
+          double a = Double.parseDouble(scanner.nextLine());
+          double b = Double.parseDouble(scanner.nextLine());
+          double h = Double.parseDouble(scanner.nextLine());
+          double yINI = Double.parseDouble(scanner.nextLine());
+          int N = (int)Math.round((b-a) / h);
 
-        double[] expected = new double[N];
-        expected[0] = 1.00000;
-        expected[1] = 1.00500;
-        expected[2] = 1.02018;
-        expected[3] = 1.04599;
-        expected[4] = 1.08322;
-        expected[5] = 1.13305;
-        expected[6] = 1.19707;
-        expected[7] = 1.27739;
-        expected[8] = 1.37677;
-        expected[9] = 1.49876;
+          String expectedString = scanner.nextLine();
+          expectedString = expectedString.substring(1, expectedString.length()-1);
+          String[] expectedStringArray = expectedString.split(",");
+          double[] expected = convert_to_double_array(expectedStringArray);
 
-        odeModEulerFunc.odeModEuler(a, b, h, yINI);
+          odeModEulerFunc.odeModEuler(a, b, h, yINI);
 
-        double[] actual = odeModEulerFunc.yArray;
+          double[] actual = odeModEulerFunc.yArray;
 
-        assertArrayEquals("Ode modified must pass simple example", expected, actual, 0.00001);
+          assertArrayEquals("Ode modified must pass simple example", expected, actual, 0.00001);
+        } catch (Exception e) {
+          e.printStackTrace();
+          assertTrue(false);
+        }
     }
 }
