@@ -22,7 +22,7 @@ public class FileTest {
 	public void fileTester(){
 		try{
 		String dir = new File( "." ).getCanonicalPath();
-		File in = new File(dir + "/src/test/resources/test.in");
+		File in = new File(dir + "/src/test/resources/test_files/demos/Prob6/test.in");
 		scan = new Scanner(in);
 		String line = scan.nextLine();
 		int cases = Integer.parseInt(line.replaceAll("\\s", ""));
